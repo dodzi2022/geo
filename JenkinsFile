@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{
-        maven 'M2_HOME'
+        // maven 'M2_HOME'
     }
     environment {
         registry = '259289693704.dkr.ecr.us-east-2.amazonaws.com/geolocation_ecr'
