@@ -7,7 +7,12 @@ pipeline {
         dockerimage = '' 
     }
     stages {
-         
+         stage('Checkout'){
+            steps{
+                 git branch: 'main', url: 'https://github.com/dodzi2022/geoMVPX0.git'
+            }
+        }
+        
         //deploy the image that is in ECR to our EKS cluster
         stage ("Kube Deploy") {
             steps {
