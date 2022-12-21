@@ -12,10 +12,11 @@ pipeline {
         stage ("Kube Deploy") {
             steps {
                   withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'eks_credential', namespace: '', serverUrl: '') {
-                 // sh "kubectl apply -f  eks_deploy_from_ecr.yaml "
-                 // sh "kubectl apply -f  service.yaml "
+                  
+                  sh "kubectl apply -f  eks_deploy_from_ecr.yaml "
+                  sh "kubectl apply -f  service.yaml "
                  
-                 sh " sudo /root/bin/kubectl get pods"
+                 
                   
                   
                  
