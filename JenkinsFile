@@ -15,7 +15,7 @@ pipeline {
                  // sh "kubectl apply -f  eks_deploy_from_ecr.yaml "
                  // sh "kubectl apply -f  service.yaml "
                  
-                 sh " sudo /root/bin/kubectl --kubeconfig=/root/.kube/config get pods"
+                 sh " sudo /root/bin/kubectl get pods"
                   
                   
                  
